@@ -1,0 +1,3 @@
+nasm digitalClock_boot.asm -f bin -o bootloader.bin
+nasm digitalClock.asm -f bin -o digitalClock.bin
+cat bootloader.bin digitalClock.bin numbers.bin > hdd_image.bin
