@@ -1,13 +1,5 @@
 DATANUM0 equ 0x8200
-DATANUM1 equ 0x8416
-DATANUM2 equ 0x862C
-DATANUM3 equ 0x8842
-DATANUM4 equ 0x8A58
-DATANUM5 equ 0x8C6E
-DATANUM6 equ 0x8E84
-DATANUM7 equ 0x909A
-DATANUM8 equ 0x92B0
-DATANUM9 equ 0x94C6
+
 [org 0x7e00]
   mov bp, 0x7c00 ; stack pointer base
   mov sp,0x7df0  ; stack pointer head
