@@ -9,7 +9,7 @@ DATA_SPACE equ 0x200
   call PrintNL
 ; Load the Image data ==>  127 sectors of Disk
   mov ah,0x02   ; read sectors service
-  mov al,127     ; number of sectors to read, only read the program NO the data
+  mov al,127     ; number of sectors to read the Image Data
   mov ch,0      ; cilinder to read
   mov cl,4      ; initial sector number to read
   mov dh,0      ; head to read
@@ -43,8 +43,6 @@ nextPixel:
   jz loadPalette
   jmp nextPixel
 loadPalette:
-  call delay
-  call delay
   call delay
   mov bx,0x1700
   mov es,bx
@@ -133,7 +131,7 @@ delay:
      push cx
      push ax
      mov dx,0xA120
-     mov cx,0x000F
+     mov cx,0x006F
      mov ah,0x86
      int 0x15
      pop ax
