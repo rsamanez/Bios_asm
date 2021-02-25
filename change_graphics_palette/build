@@ -1,0 +1,2 @@
+nasm using_bios.asm -f bin -o bootloader.bin
+

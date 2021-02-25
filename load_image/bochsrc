@@ -1,0 +1,12 @@
+megs: 32
+romimage: file=$BXSHARE/BIOS-bochs-latest
+vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest
+vga: extension=vbe, update_freq=15
+boot: c
+#boot: floppy
+#floppya: type=1_44, 1_44="Floppy_1.44.img", status=inserted, write_protected=0
+ata0-master: type=disk, path=hdd_image.bin, cylinders=1, heads=10, spt=13
+#ata0-master: type=disk, path=c.img, cylinders=306, heads=4, spt=17
+log: logOut.log
+mouse: enabled=0
+cpu: ips=15000000

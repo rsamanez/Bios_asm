@@ -1,0 +1,3 @@
+nasm loadImage_boot.asm -f bin -o bootloader.bin
+nasm loadImage.asm -f bin -o loadImage.bin
+cat bootloader.bin loadImage.bin image.bin > hdd_image.bin
